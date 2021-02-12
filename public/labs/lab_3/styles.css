@@ -1,2 +1,60 @@
 /* Add some css styles based on the tutorial at javascript.info: introduction to browser events
  https://javascript.info/introduction-browser-events */
+
+ body{
+     background-color: rgb(247, 164, 182);
+ }
+
+ img{
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ button{
+     display: inline-flex;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .button1{
+    margin-left: 0%;
+ }
+ .button1{
+     margin-right: 0%;
+ }
+
+ .slideSelection{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     max-width: fit-content;
+     margin: auto;
+     position: relative;
+ }
+
+ .slideSelection .slider{
+     position: relative;
+     overflow: hidden;
+     width: auto;
+     height: auto;
+     margin: auto;
+     transition-delay: 0ms;
+ }
+
+ .slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    margin: 48px auto;
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+    transition: background-image 0.8s ease-in-out;
+  }
+  
+  .slider .slide {
+    display: none;
+  }
+  
