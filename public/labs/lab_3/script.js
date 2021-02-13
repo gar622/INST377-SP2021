@@ -1,39 +1,42 @@
 /* Put your javascript in here */
-function arrayCarousel(){
-    const array1=[] 
-    const slide = document.querySelectorAll(".slider")
-    let currentSlideIndex = 0;
+const array1 = [];
 
-    const init =(i) =>{
-        slide.forEach((slidee) => {
-            slide.style.display = "none"
-        })
-    }
-
-    slide[i].style.display="block"
-
+for (let i = 0; i < document.querySelectorAll(".slider div").length; i++) {
+  slideArray.push(
+    document.querySelectorAll(".slider div")[i].dataset.background
+  );
 }
 
-document.addEventListener("DOMContentLoaded", init(currentSlide))
-   
+let currentSlideIndex = -1;
+function advanceSliderItem() {
+  currentSlideIndex++;
+  if (currentSlideIndex >= slideArray.length) {
+    currentSlideIndex = 0;
+  }
+}
 
-const forward = () =>{
-        currentSlideIndex >= slide.length -1? currentSlide =0: currentSlide++
-        init(currentSlide) 
-    }
+let intervalID = setInterval(advanceSliderItem, 3000);
 
-    const back = ()  => {
-        currentSlide <= 0? currentSlide = slides.length-1: currentSlide--
-        init(currentSlide)
-    }
+function fowardSlide() {
+  slides[currentSlide].className = "slide";
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].className = "slide showing";
+}
 
-    document.querySelector(".forward").addEventListener("button",forward)
-    document.querySelector(".back").addEventListener("button", back)
-    
-    setInterval(() =>{
-        forward()
-    }, 5000);
+function backSlide() {
+  slides[currentSlide].className = "slide";
+  currentSlide = (currentSlide - 1) % slides.length;
 
+  if (currentSlide == -1) {
+    currentSlide = slides.length - 1;
+  }
+  slides[currentSlide].className = "slide showing";
+}
 
+forwardButton.addEventListener("click", () => {
+  forwardSlide();
+});
 
-
+backButton.addEventListener("click", () => {
+  backSlide();
+});
