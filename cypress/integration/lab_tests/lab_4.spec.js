@@ -11,7 +11,7 @@ describe('Lab 4', () => {
   it('Should contain your name and lab number within the page title', () => {
     cy.fixture('test_values').then((json) => {
       cy.title().then(($title) => {
-        const [name, lab, title] = [json.name, 'lab 4', $title].map((m) => m.toUpperCase());
+        const [name, lab, title] = [json.name, '/lab_4', $title].map((m) => m.toUpperCase());
         expect(title.includes(name)).to.be.true;
         expect(title.includes(lab)).to.be.true;
       });
