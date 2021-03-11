@@ -1,0 +1,192 @@
+#mapid { 
+    height: 180px; 
+}
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+html {
+    font-size: 10px;
+  
+  }
+  
+body {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+        
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+        
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    background: cornflowerblue;
+    color: #fff;
+  }
+
+h1 {
+    margin-bottom: 5px;
+    font-size: 4em;
+    padding-left: 15px;
+    font-family: 'Poppins', serif;
+    flex-direction: column;
+    
+}
+
+h2{
+    margin-bottom: 10px;
+    font-size: 2em;
+    padding-left: 15px;
+    font-family: 'Poppins', serif;
+    flex-direction: column;
+}
+
+.suggestions {
+    display:inline;
+    margin-left: 250;
+}
+
+.box1 {
+    margin-left: 250;
+    margin: 10px;
+    display: block;
+    list-style-position: inside;
+    align-items: left;
+    justify-content: left;
+    align-self: left;
+
+}
+
+
+.container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    align-self: left;
+  }
+  
+.container * {
+    box-sizing: border-box;
+  }
+
+.flex-outer > .box1:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+.flex-outer .box1 label, .box1 .rname
+.flex-outer .box1 li {
+    padding: 8px;
+    font-weight: 300;
+    letter-spacing: .09em; 
+  }
+
+.flex-outer>.box1>label, .flex-outer .box1 .rname{
+    flex: 1 0 120px;
+    max-width: 220px;
+}
+
+.flex-outer>.box1>.rname>label + *, .flex-inner{
+    flex: 1 0 220px;
+}
+
+.flex-outer,
+.flex-inner {
+    list-style-type: none;
+    padding: 0;
+  }  
+
+.flex-outer {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+.flex-outer .box1, .flex-inner .rname{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: left;
+    justify-content: space-around;
+    align-self:center;
+}
+
+.column-background{
+    background: rgb(247, 148, 148); 
+    height: 100px;
+}
+
+.userform {
+    display: block;
+    font-size:medium;
+    font-family: 'Poppins', serif;
+    margin: 0 auto;
+    position:fixed;
+    text-align: left;
+    align-items: center;
+    justify-content:space-around;
+    align-self: left;
+}
+
+
+
+#grad .box1{
+    background-image: linear-gradient(180deg, rgb(194, 167, 245), rgb(134, 181, 235)); /* color gradient detail */ 
+}
+
+/* .name{
+    font-family: 'Poppins', serif;
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+} */
+
+.hl{
+    font-size: 1.25em;
+    font-family: 'Poppins', serif;
+    display: block;
+}
+
+.address1 {
+    font-family: 'Poppins', serif;
+    display: block;
+    white-space: pre-line; 
+    
+}
+.address2 {
+    font-family: 'Poppins', serif;
+    display: block;
+    white-space: pre-line; 
+}
+
+.city {
+    font-family: 'Poppins', serif;
+    display: block;
+    white-space: pre-line; 
+    
+}
+
+.state {
+    font-family: 'Poppins', serif;
+    display: block;
+    white-space: pre-line; 
+}
+
+.zipcode {
+    font-family: 'Poppins', serif;
+    display: block;
+    white-space: pre-line; 
+}
+
+.category {
+    font-family: 'Poppins', serif;
+    display: block;
+    white-space: pre-line; 
+
+}
