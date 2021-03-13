@@ -3,6 +3,8 @@
     width: 600px;
 }
 
+
+
 .column{
     display: flexbox;
     position: relative;
@@ -133,7 +135,7 @@ h2{
     height: 100px;
 }
 
-.userform {
+.search-form {
     display: flex;
     font-size:small;
     font-family: 'Poppins', serif;
