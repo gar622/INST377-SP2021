@@ -1,5 +1,21 @@
 #mapid { 
-    height: 180px; 
+    height: 600px; 
+    width: 600px;
+}
+
+.column{
+    display: flexbox;
+    position: relative;
+    margin: 20px;
+    left: 575px;
+    top: 20px;
+}
+
+.columns{
+    margin-left: 250;
+    margin: 10px;
+    display: flexbox;
+    position:relative;
 }
 html, body {
     margin: 0;
@@ -47,22 +63,22 @@ h2{
 }
 
 .suggestions {
-    display:inline;
-    margin-left: 250;
+    display:flex-box;
+    margin-left: 100;
+    font-size: medium;
+    flex-direction: column;
+    align-items: left;
 }
 
 .box1 {
     margin-left: 250;
     margin: 10px;
-    display: block;
-    list-style-position: inside;
-    align-items: left;
-    justify-content: left;
-    align-self: left;
+    display: flexbox;
+    position:relative;
+    left: -575px;
+    top: 20px;
 
 }
-
-
 .container {
     display: flex;
     align-items: left;
@@ -101,16 +117,15 @@ h2{
   }  
 
 .flex-outer {
-    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
     margin: 0 auto;
+    width: 500px;
   }
 
 .flex-outer .box1, .flex-inner .rname{
     display: flex;
     flex-wrap: wrap;
-    align-items: left;
-    justify-content: space-around;
-    align-self:center;
 }
 
 .column-background{
@@ -119,74 +134,32 @@ h2{
 }
 
 .userform {
-    display: block;
-    font-size:medium;
+    display: flex;
+    font-size:small;
     font-family: 'Poppins', serif;
     margin: 0 auto;
     position:fixed;
     text-align: left;
-    align-items: center;
-    justify-content:space-around;
     align-self: left;
 }
-
-
 
 #grad .box1{
     background-image: linear-gradient(180deg, rgb(194, 167, 245), rgb(134, 181, 235)); /* color gradient detail */ 
 }
 
-/* .name{
+.name{
     font-family: 'Poppins', serif;
-    border-radius: 1em;
-    padding: 1em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-} */
+    display: flexbox;
+} 
 
 .hl{
-    font-size: 1.25em;
     font-family: 'Poppins', serif;
-    display: block;
-}
-
-.address1 {
-    font-family: 'Poppins', serif;
-    display: block;
-    white-space: pre-line; 
-    
-}
-.address2 {
-    font-family: 'Poppins', serif;
-    display: block;
-    white-space: pre-line; 
-}
-
-.city {
-    font-family: 'Poppins', serif;
-    display: block;
-    white-space: pre-line; 
-    
-}
-
-.state {
-    font-family: 'Poppins', serif;
-    display: block;
-    white-space: pre-line; 
+    display:flexbox;  
 }
 
 .zipcode {
+
     font-family: 'Poppins', serif;
-    display: block;
-    white-space: pre-line; 
+    display:flexbox;
 }
 
-.category {
-    font-family: 'Poppins', serif;
-    display: block;
-    white-space: pre-line; 
-
-}
