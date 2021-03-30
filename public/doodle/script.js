@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     let isJumping = true
     let isGoingLeft = false
     let isGoingRight = false
+    let leftTimerId
+    let rightTimerId
 
 
     function createDoodler() {
@@ -53,6 +55,14 @@ document.addEventListener('DOMContentLoaded',()=>{
                 platform.bottom -=4
                 let visual = platform.visual
                 visual.style.bottom = platform.bottom + 'px'
+
+                if(platform.bottom < 10){
+                    let firstPlatform = platforms[0].visual
+                    firstPlatform.classList.remove('platform')
+                    platforms.shift()
+                    console.log(plateforms)
+                    let newPlatform = new Platform(600)
+                }
             })
         }
     }
@@ -107,14 +117,44 @@ document.addEventListener('DOMContentLoaded',()=>{
         if (e.key === "ArrowLeft"){
             moveLeft()
         }else if (e.key === "ArrowRight"){
-
+            moveRight()
         }else if (e.key === "ArrowUp"){
-
+            moveStraight
         }
     }
 
     function moveLeft(){
+        if (isGoingRight) {
+            clearInterval(rightTimerId)
+            isGoingRight = false
+        }
         isGoingLeft = true
+        leftTimerId - setInterval(function(){
+            if(doodlerLeftSpace >= 0) {
+            doodlerLeftSpace -= 5
+            doodler.style.left = doodlerLeftSpace + 'px'
+            } else moveRight()
+        },30)
+    }
+
+    function moveRight(){
+        if(isGoingLeft){
+            clearInterval(leftTimerId)
+            isGoingLeft = false
+        }
+        isGoingRight = truerightTimerId = setInterval(function(){
+            if(doodlerLeftSpace <= 340){
+                doodlerLeftSpace += 5
+                doodler.style.left = doodlerLeftSpace + 'px'
+            }else moveLeft()
+        },30)
+    }
+
+    function moveStraight(){
+        isGoingRight = false
+        isGoingLeft = false 
+        clearInterval(rightTimerId)
+        clearInterval(leftTimerId)
     }
 
     function start() {
@@ -123,6 +163,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             createDoodler()
             setInterval(movePlatforms,30)
             jump()
+            document.addEventListener('keyup', control)
         }
     }
 })
