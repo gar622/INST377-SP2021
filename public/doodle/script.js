@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
     function createDoodler() {
-        grid.appendChild(doodller)
+        grid.appendChild(doodler)
         doodler.classList.add('doodler')
         doodlerLeftSpace = platforms[0].left
         doodler.style.left = doodlerLeftSpace + 'px'
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             let newPlatBottom = 100 + i * platGap
             let newPlatform = new Platform(newPlatBottom)
             platforms.push(newPlatform)
-            console.log(plateforms )
+            console.log(platforms)
         }
     }
 
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         console.log('game over')
         isGameOver = true
         while (grid.firstChild) {
-            grid.removeChile(grid.firstChild)
+            grid.removeChild(grid.firstChild)
         }
         grid.innerHTML = score
         clearInterval(upTimerId)
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     }
 
-    function control() {
+    function control(e) {
         if (e.key === "ArrowLeft"){
             moveLeft()
         }else if (e.key === "ArrowRight"){
