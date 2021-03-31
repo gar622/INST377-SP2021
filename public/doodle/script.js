@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             let platGap = 600 / platformCount
             let newPlatBottom = 100 + i * platGap
             let newPlatform = new Platform(newPlatBottom)
-           
+            platforms.push(newPlatform)
             console.log(platforms)
         }
     }
