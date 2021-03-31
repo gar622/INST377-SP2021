@@ -3,12 +3,12 @@
     height: 600px;
     background-image: url(doodleImages/background.png);
     position: relative;
-    font-size: 200px;
+    font-size: 100px;
     text-align: center;
 }
 
 .doodler{
-    width:60 px;
+    width: 87px;
     height: 85px;
     background-image: url(doodleImages/doodler-guy.png);
     position: absolute;
