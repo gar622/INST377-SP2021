@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         downTimerId = setInterval(function() {
             doodlerBottomSpace -= 5
             doodler.style.bottom = doodlerBottomSpace + 'px'
-            if(doodlerbottomSpace <= 0){
+            if(doodlerBottomSpace <= 0){
                 gameOver()
             }
             platforms.forEach(platform => {
