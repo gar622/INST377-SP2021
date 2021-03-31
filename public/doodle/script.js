@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     function createDoodler() {
         grid.appendChild(doodler)
         doodler.classList.add('doodler')
-        doodlerLeftSpace = platforms[0]
+        doodlerLeftSpace = platforms[0].left
         doodler.style.left = doodlerLeftSpace + 'px'
         doodler.style.bottom = doodlerBottomSpace + 'px'
 
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         upTimerId = setInterval(function() {
             doodlerBottomSpace += 20
             doodler.style.bottom = doodlerBottomSpace + 'px'
-            if(doodlerBottomSpace > startPoint + 200) {
+            if(doodlerBottomSpace > (startPoint + 200)) {
                 fall()
                 isJumping = false
             }
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         }
         isGoingRight = true
         rightTimerId = setInterval(function(){
-            if(doodlerLeftSpace <= 340){
+            if(doodlerLeftSpace <= 313){
                 doodlerLeftSpace += 5
                 doodler.style.left = doodlerLeftSpace + 'px'
             }else moveLeft()
